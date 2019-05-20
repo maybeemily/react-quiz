@@ -6,10 +6,10 @@ export default class ColorSelector extends PureComponent {
     backgroundColor: '#0000FF'
   }
 
-  handleSumbit = event => {
-    event.preventDefault();
-    const { textColor, backgroundColor } = this.state;
-  }
+  // handleSubmit = event => {
+  //   event.preventDefault();
+  //   const { textColor, backgroundColor } = this.state;
+  // }
 
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
@@ -18,10 +18,10 @@ export default class ColorSelector extends PureComponent {
   render() {
     const { textColor, backgroundColor } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <>
         <input name="textColor" type="color" value={textColor} onChange={this.handleChange}/>
         <input name="backgroundColor" type="color" value={backgroundColor} onChange={this.handleChange}/>
-      </form>
+      </>
     );
   }
 
