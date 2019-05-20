@@ -6,7 +6,7 @@ import TextSelector from '../components/TextSelector';
 
 export default class NameTag extends PureComponent {
 
-  //container = component that has state
+  //container = component that has state. using class because state
   //should take the current state of color and text via shape
 
 }

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 function Shape({ text, textColor, backgroundColor}) {
 
+ //returns a div 
  
 }
 
