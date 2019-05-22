@@ -1,8 +1,8 @@
 import React from 'react';
-import Shape from './Shape';
+import NameTag from '../containers/NameTag';
+
 
 
 export default function App() {
-  return <Shape text={'cool text'} color={'white'} backgroundColor={'red'} />;
- 
+  return <NameTag/>;
 }
