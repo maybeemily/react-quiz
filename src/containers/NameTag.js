@@ -1,12 +1,13 @@
 import React, { PureComponent } from 'react';
 import Shape from '../components/Shape';
 import TextSelector from '../components/TextSelector';
+import ColorSelector from '../components/ColorSelector';
 
 export default class NameTag extends PureComponent {
   state = {
     text: '',
-    color: 'white',
-    backgroundColor: 'red'
+    color: '#000000',
+    backgroundColor: '#0000FF'
   }
 
   handleChange = ({ target }) => {
@@ -14,12 +15,13 @@ export default class NameTag extends PureComponent {
   }
 
   render() {
-    const { text } = this.state;
+    const { text, color, backgroundColor } = this.state;
 
     return (
       <>
       <TextSelector text={text} handleChange={this.handleChange}/>
-      <Shape text={text} color={this.state.color} backgroundColor={this.state.backgroundColor}/>
+      <ColorSelector color={color} backgroundColor={backgroundColor} handleChange={this.handleChange}/>
+      <Shape text={text} color={color} backgroundColor={backgroundColor}/>
       </>
     );
   }
